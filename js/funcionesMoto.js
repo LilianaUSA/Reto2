@@ -115,7 +115,7 @@ function consultarMotoTodo() {
 
 function consultarMotoId(quaIdConsulta) {
     $.ajax({
-        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/moto/moto' + quaIdConsulta.val(),
+        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/moto/moto/' + quaIdConsulta.val(),
         dataType: 'json',
         type: 'GET',
         success: function (json) {
