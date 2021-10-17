@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv=”Content-Type” content=”text/html; charset=ISO-8859-1″ />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MC ANDRU'S 2.0</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/funcionesCabin.js"></script>
+</head>
+
+<body>
+    <h2>MC ANDRU´S SYSTEMS</h2>
+    <h3>QUADBIKE</h3>
+    <fieldset style="width: 300px;">
+        <legend>Información</legend>
+        <table>
+            <tr>
+                <th style="text-align: left; width: 120px;">Id</th>
+                <td><input type="number" id="quaId"></td>
+            </tr>
+            <tr>
+                <th style="text-align: left; width: 120px;">Marca</th>
+                <td><input type="text" id="quaMarca" text-transform: uppercase> </td>
+            </tr>
+            <tr>
+                <th style="text-align: left; width: 120px;">Modelo</th>
+                <td><input type="number" id="quaModelo"> </td>
+            </tr>
+            <tr>
+                <th style="text-align: left; width: 120px;">Categoria</th>
+                <td><input type="number" id="quaCategoria"> </td>
+            </tr>
+            <tr>
+                <th style="text-align: left; width: 120px;">Nombre</th>
+                <td><input type="text" id="quaNombre" text-transform: uppercase> </td>
+            </tr>
+            <tr>
+                <th>
+                    <br />
+                </th>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="button" value="Guardar" onclick="guardarQuadbike()">
+                    <input type="button" value="Editar" onclick="editarQuadbike()">
+                    <input type="button" value="Eliminar" onclick="eliminarQuadbike()">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <h3>CONSULTA</h3>
+    <fieldset style="width: 300px;">
+        <legend>Información</legend>
+        <table>
+            <tr>
+                <th style="text-align: left; width: 120px;">Id</th>
+                <td><input type="number" id="quaIdConsulta"></td>
+            </tr>
+            <tr>
+                <th>
+                    <br />
+                </th>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="button" value="Todo" onclick="consultarQuadbikeTodo()">
+                    <input type="button" value="Por Id" onclick="consultarQuadbikeId($('#quaIdConsulta'))">
+                </td>
+            </tr>
+            <tr>
+                <table border="1" cellpadding="3" id="tablaQuadbike">
+                    <tbody>
+                    </tbody>
+                </table>
+            </tr>
+        </table>
+    </fieldset>
+    <br />
+    <a href="client.html">Clientes</a>
+    &nbsp;&nbsp;
+    <a href="message.html">Mensajes</a>
+
+</body>
+
+</html>

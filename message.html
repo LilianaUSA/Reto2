@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv=”Content-Type” content=”text/html; charset=ISO-8859-1″ />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MC ANDRU'S</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/funcionesMensajes.js"></script>
+</head>
+
+<body>
+    <h2>MC ANDRU´S SYSTEMS</h2>
+    <h3>MENSAJES</h3>
+    <fieldset style="width: 300px">
+        <legend>Información</legend>
+        <table>
+            <tr>
+                <th style="text-align: left; width: 120px;">Id</th>
+                <td><input type="number" id="menId"></td>
+            </tr>
+            <tr>
+                <th style="text-align: left; width: 120px;">Mensaje</th>
+                <td><input type="text" id="menMensaje"> </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="button" value="Guardar" onclick="guardarMensaje()">
+                    <input type="button" value="Editar" onclick="editarMensaje()">
+                    <input type="button" value="Eliminar" onclick="eliminarMensaje()">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <h3>CONSULTA</h3>
+    <fieldset style="width: 300px">
+        <legend>Información</legend>
+        <table>
+            <tr>
+                <th style="text-align: left; width: 120px;">Id</th>
+                <td><input type="number" id="menConsultaId"></td>
+            </tr>
+            <tr>
+                <th>
+                    <br />
+                </th>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <input type="button" value="Todo" onclick="consultarMensajeTotal()">
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="button" value="Por Id" onclick="consultarMensajeId($('#menConsultaId'))">
+                </td>
+            </tr>
+            <tr>
+                <table border="1" cellpadding="3" id="TablaMensajes">
+                    <tbody>
+                    </tbody>
+                </table>
+            </tr>
+        </table>
+    </fieldset>
+
+    <br />
+    <a href="quadbike.html">Quadbike</a>
+    &nbsp;&nbsp;
+    <a href="client.html">Clientes</a>
+</body>
+
+</html>
