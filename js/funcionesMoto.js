@@ -1,16 +1,16 @@
-function guardarQuadbike() {
+function guardarMoto() {
     var datos = {
-        id: $('#quaId').val(),
-        brand: $('#quaMarca').val(),
-        model: $('#quaModelo').val(),
-        category_id: $('#quaCategoria').val(),
-        name: $('#quaNombre').val()
+        id: $('#MotoId').val(),
+        brand: $('#MotoMarca').val(),
+        model: $('#MotoModelo').val(),
+        category_id: $('#MotoCategoria').val(),
+        name: $('#MotoNombre').val()
     }
 
     var datosEnviar = JSON.stringify(datos);
 
     $.ajax({
-        url: 'https://ge301a5c054b859-dbreto.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/quadbike/quadbike',
+        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/moto/moto',
         data: datosEnviar,
         type: 'POST',
         dataType: 'json',
@@ -19,25 +19,25 @@ function guardarQuadbike() {
             console.log(response);
         },
         complete: function (xhr, status) {
-            alert('Registro guardado ' + xhr.status);
-            limpiarFormularioQuadbike();
+            alert('Dato Almacenado ' + xhr.status);
+            limpiarFormularioMoto();
         }
     });
 }
 
-function editarQuadbike() {
+function editarMoto() {
     var datos = {
-        id: $('#quaId').val(),
-        brand: $('#quaMarca').val(),
-        model: $('#quaModelo').val(),
-        category_id: $('#quaCategoria').val(),
-        name: $('#quaNombre').val()
+        id: $('#MotoId').val(),
+        brand: $('#MotoMarca').val(),
+        model: $('#MotoModelo').val(),
+        category_id: $('#MotoCategoria').val(),
+        name: $('#MotoNombre').val()
     }
 
     var datosEnviar = JSON.stringify(datos);
 
     $.ajax({
-        url: 'https://ge301a5c054b859-dbreto.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/quadbike/quadbike',
+        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/moto/moto',
         data: datosEnviar,
         type: 'PUT',
         dataType: 'json',
@@ -47,20 +47,20 @@ function editarQuadbike() {
         },
         complete: function (xhr, status) {
             alert('Registro editado ' + xhr.status);
-            limpiarFormularioQuadbike();
+            limpiarFormularioMoto();
         }
     });
 }
 
-function eliminarQuadbike() {
+function eliminarMoto() {
     var datos = {
-        id: $("#quaId").val()
+        id: $("#MotoId").val()
     }
 
     var datosEnviar = JSON.stringify(datos);
 
     $.ajax({
-        url: 'https://ge301a5c054b859-dbreto.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/quadbike/quadbike',
+        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/moto/moto',
         data: datosEnviar,
         type: 'DELETE',
         dataType: 'json',
@@ -73,14 +73,14 @@ function eliminarQuadbike() {
         },
         complete: function (xhr, status) {
             alert('Registro eliminado ' + xhr.status);
-            limpiarFormularioQuadbike();
+            limpiarFormularioMoto();
         }
     });
 }
 
-function consultarQuadbikeTodo() {
+function consultarMotoTodo() {
     $.ajax({
-        url: 'https://ge301a5c054b859-dbreto.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/quadbike/quadbike',
+        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/moto/moto',
         type: 'GET',
         dataType: 'json',
 
@@ -91,50 +91,50 @@ function consultarQuadbikeTodo() {
             alert('Consulta realizada, ' + xhr.status);
         },
         success: function (json) {
-            $("#tablaQuadbike").empty();
-            $("#tablaQuadbike").append("<tr>");
-            $("#tablaQuadbike").append("<th>Id</th>");
-            $("#tablaQuadbike").append("<th>Marca</th>");
-            $("#tablaQuadbike").append("<th>Modelo</th>");
-            $("#tablaQuadbike").append("<th>Categoria</th>>");
-            $("#tablaQuadbike").append("<th>Nombre</th>>");
-            $("#tablaQuadbike").append("</tr>");
+            $("#tablaMoto").empty();
+            $("#tablaMoto").append("<tr>");
+            $("#tablaMoto").append("<th>Id</th>");
+            $("#tablaMoto").append("<th>Marca</th>");
+            $("#tablaMoto").append("<th>Modelo</th>");
+            $("#tablaMoto").append("<th>Categoria</th>>");
+            $("#tablaMoto").append("<th>Nombre</th>>");
+            $("#tablaMoto").append("</tr>");
             for (i = 0; i < json.items.length; i++) {
-                $("#tablaQuadbike").append("<tr>");
-                $("#tablaQuadbike").append("<td>" + json.items[i].id + "</td>");
-                $("#tablaQuadbike").append("<td>" + json.items[i].brand + "</td>");
-                $("#tablaQuadbike").append("<td>" + json.items[i].model + "</td>");
-                $("#tablaQuadbike").append("<td>" + json.items[i].category_id + "</td>");
-                $("#tablaQuadbike").append("<td>" + json.items[i].name + "</td>");
-                $("#tablaQuadbike").append("</tr>");
+                $("#tablaMoto").append("<tr>");
+                $("#tablaMoto").append("<td>" + json.items[i].id + "</td>");
+                $("#tablaMoto").append("<td>" + json.items[i].brand + "</td>");
+                $("#tablaMoto").append("<td>" + json.items[i].model + "</td>");
+                $("#tablaMoto").append("<td>" + json.items[i].category_id + "</td>");
+                $("#tablaMoto").append("<td>" + json.items[i].name + "</td>");
+                $("#tablaMoto").append("</tr>");
             }
             console.log(json)
         }
     });
 }
 
-function consultarQuadbikeId(quaIdConsulta) {
+function consultarMotoId(quaIdConsulta) {
     $.ajax({
-        url: 'https://ge301a5c054b859-dbreto.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/quadbike/quadbike/:id' + quaIdConsulta.val(),
+        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/moto/moto' + quaIdConsulta.val(),
         dataType: 'json',
         type: 'GET',
         success: function (json) {
-            $("#tablaQuadbike").empty();
-            $("#tablaQuadbike").append("<tr>");
-            $("#tablaQuadbike").append("<th>Id</th>");
-            $("#tablaQuadbike").append("<th>Marca</th>");
-            $("#tablaQuadbike").append("<th>Modelo</th>");
-            $("#tablaQuadbike").append("<th>Categoria</th>>");
-            $("#tablaQuadbike").append("<th>Nombre</th>>");
-            $("#tablaQuadbike").append("</tr>");
+            $("#tablaMoto").empty();
+            $("#tablaMoto").append("<tr>");
+            $("#tablaMoto").append("<th>Id</th>");
+            $("#tablaMoto").append("<th>Marca</th>");
+            $("#tablaMoto").append("<th>Modelo</th>");
+            $("#tablaMoto").append("<th>Categoria</th>>");
+            $("#tablaMoto").append("<th>Nombre</th>>");
+            $("#tablaMoto").append("</tr>");
             for (i = 0; i < json.items.length; i++) {
-                $("#tablaQuadbike").append("<tr>");
-                $("#tablaQuadbike").append("<td>" + json.items[i].id + "</td>");
-                $("#tablaQuadbike").append("<td>" + json.items[i].brand + "</td>");
-                $("#tablaQuadbike").append("<td>" + json.items[i].model + "</td>");
-                $("#tablaQuadbike").append("<td>" + json.items[i].category_id + "</td>");
-                $("#tablaQuadbike").append("<td>" + json.items[i].name + "</td>");
-                $("#tablaQuadbike").append("</tr>");
+                $("#tablaMoto").append("<tr>");
+                $("#tablaMoto").append("<td>" + json.items[i].id + "</td>");
+                $("#tablaMoto").append("<td>" + json.items[i].brand + "</td>");
+                $("#tablaMoto").append("<td>" + json.items[i].model + "</td>");
+                $("#tablaMoto").append("<td>" + json.items[i].category_id + "</td>");
+                $("#tablaMoto").append("<td>" + json.items[i].name + "</td>");
+                $("#tablaMoto").append("</tr>");
             }
             console.log(json)
         },
@@ -147,10 +147,10 @@ function consultarQuadbikeId(quaIdConsulta) {
     });
 }
 
-function limpiarFormularioQuadbike() {
-    $("#quaId").val("");
-    $("#quaMarca").val("");
-    $("#quaModelo").val("");
-    $("#quaCategoria").val("");
-    $("#quaNombre").val("");
+function limpiarFormularioMoto() {
+    $("#MotoId").val("");
+    $("#MotoMarca").val("");
+    $("#MotoModelo").val("");
+    $("#MotoCategoria").val("");
+    $("#MotoNombre").val("");
 }

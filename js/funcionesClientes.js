@@ -9,7 +9,7 @@ function guardarCliente() {
     var datosEnviar = JSON.stringify(datos);
 
     $.ajax({
-        url: 'https://ge301a5c054b859-dbreto.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/client/client',
+        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/client/client',
         data: datosEnviar,
         type: 'POST',
         dataType: 'json',
@@ -35,7 +35,7 @@ function editarCliente() {
     var datosaEnviar = JSON.stringify(datos);
 
     $.ajax({
-        url: 'https://ge301a5c054b859-dbreto.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/client/client',
+        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/client/client',
         data: datosaEnviar,
         type: 'PUT',
         dataType: 'json',
@@ -58,7 +58,7 @@ function eliminarCliente() {
     var datosEnviar = JSON.stringify(datos);
 
     $.ajax({
-        url: 'https://ge301a5c054b859-dbreto.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/client/client',
+        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/client/client',
         data: datosEnviar,
         type: 'DELETE',
         dataType: 'json',
@@ -78,7 +78,7 @@ function eliminarCliente() {
 
 function consultarClienteTodo() {
     $.ajax({
-        url: 'https://ge301a5c054b859-dbreto.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/client/client',
+        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/client/client',
         type: 'GET',
         dataType: 'json',
 
@@ -111,7 +111,7 @@ function consultarClienteTodo() {
 
 function consultarClienteId(cliConsultaId) {
     $.ajax({
-        url: 'https://ge301a5c054b859-dbreto.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/client/client/:id' + cliConsultaId.val(),
+        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/client/client' + cliConsultaId.val(),
         dataType: 'json',
         type: 'GET',
         success: function (json) {

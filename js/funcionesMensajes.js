@@ -7,7 +7,7 @@ function guardarMensaje() {
     var datosEnviar = JSON.stringify(datos);
 
     $.ajax({
-        url: 'https://ge301a5c054b859-dbreto.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message',
+        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/message/message',
         data: datosEnviar,
         type: 'POST',
         dataType: 'json',
@@ -31,7 +31,7 @@ function editarMensaje() {
     var datosEnviar = JSON.stringify(datos);
 
     $.ajax({
-        url: 'https://ge301a5c054b859-dbreto.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message',
+        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/message/message',
         data: datosEnviar,
         type: 'PUT',
         dataType: 'json',
@@ -54,7 +54,7 @@ function eliminarMensaje() {
     var datosEnviar = JSON.stringify(datos);
 
     $.ajax({
-        url: 'https://ge301a5c054b859-dbreto.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message',
+        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/message/message',
         data: datosEnviar,
         type: 'DELETE',
         dataType: 'json',
@@ -74,7 +74,7 @@ function eliminarMensaje() {
 
 function consultarMensajeTotal() {
     $.ajax({
-        url: 'https://ge301a5c054b859-dbreto.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message',
+        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/message/message',
         type: 'GET',
         dataType: 'json',
 
@@ -103,7 +103,7 @@ function consultarMensajeTotal() {
 
 function consultarMensajeId(menConsultaId) {
     $.ajax({
-        url: 'https://ge301a5c054b859-dbreto.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message/:id' + menConsultaId.val(),
+        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/message/message' + menConsultaId.val(),
         dataType: 'json',
         type: 'GET',
         success: function (json) {

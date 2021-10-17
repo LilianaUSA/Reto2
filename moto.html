@@ -4,37 +4,37 @@
 <head>
     <meta http-equiv=”Content-Type” content=”text/html; charset=ISO-8859-1″ />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MC ANDRU'S 2.0</title>
+    <title>Moto</title>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/funcionesCabin.js"></script>
+    <script src="js/funcionesMoto.js"></script>
 </head>
 
 <body>
-    <h2>MC ANDRU´S SYSTEMS</h2>
-    <h3>QUADBIKE</h3>
+    <h2>Moto's Data Base</h2>
+    <h3>MOTO</h3>
     <fieldset style="width: 300px;">
         <legend>Información</legend>
         <table>
             <tr>
                 <th style="text-align: left; width: 120px;">Id</th>
-                <td><input type="number" id="quaId"></td>
+                <td><input type="number" id="MotoId"></td>
             </tr>
             <tr>
                 <th style="text-align: left; width: 120px;">Marca</th>
-                <td><input type="text" id="quaMarca" text-transform: uppercase> </td>
+                <td><input type="text" id="MotoMarca" text-transform: uppercase> </td>
             </tr>
             <tr>
                 <th style="text-align: left; width: 120px;">Modelo</th>
-                <td><input type="number" id="quaModelo"> </td>
+                <td><input type="number" id="MotoModelo"> </td>
             </tr>
             <tr>
                 <th style="text-align: left; width: 120px;">Categoria</th>
-                <td><input type="number" id="quaCategoria"> </td>
+                <td><input type="number" id="MotoCategoria"> </td>
             </tr>
             <tr>
                 <th style="text-align: left; width: 120px;">Nombre</th>
-                <td><input type="text" id="quaNombre" text-transform: uppercase> </td>
+                <td><input type="text" id="MotoNombre" text-transform: uppercase> </td>
             </tr>
             <tr>
                 <th>
@@ -43,9 +43,9 @@
             </tr>
             <tr>
                 <td colspan="3">
-                    <input type="button" value="Guardar" onclick="guardarQuadbike()">
-                    <input type="button" value="Editar" onclick="editarQuadbike()">
-                    <input type="button" value="Eliminar" onclick="eliminarQuadbike()">
+                    <input type="button" value="Guardar" onclick="guardarMoto()">
+                    <input type="button" value="Editar" onclick="editarMoto()">
+                    <input type="button" value="Eliminar" onclick="eliminarMoto()">
                 </td>
             </tr>
         </table>
@@ -56,7 +56,7 @@
         <table>
             <tr>
                 <th style="text-align: left; width: 120px;">Id</th>
-                <td><input type="number" id="quaIdConsulta"></td>
+                <td><input type="number" id="MotoIdConsulta"></td>
             </tr>
             <tr>
                 <th>
@@ -65,12 +65,12 @@
             </tr>
             <tr>
                 <td colspan="3">
-                    <input type="button" value="Todo" onclick="consultarQuadbikeTodo()">
-                    <input type="button" value="Por Id" onclick="consultarQuadbikeId($('#quaIdConsulta'))">
+                    <input type="button" value="Todo" onclick="consultarMotoTodo()">
+                    <input type="button" value="Por Id" onclick="consultarMotoId($('#MotoIdConsulta'))">
                 </td>
             </tr>
             <tr>
-                <table border="1" cellpadding="3" id="tablaQuadbike">
+                <table border="2" cellpadding="3" id="tablaMoto">
                     <tbody>
                     </tbody>
                 </table>
