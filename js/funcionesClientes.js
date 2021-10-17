@@ -111,7 +111,7 @@ function consultarClienteTodo() {
 
 function consultarClienteId(cliConsultaId) {
     $.ajax({
-        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/client/client' + cliConsultaId.val(),
+        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/client/client/' + cliConsultaId.val(),
         dataType: 'json',
         type: 'GET',
         success: function (json) {

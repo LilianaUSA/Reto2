@@ -103,7 +103,7 @@ function consultarMensajeTotal() {
 
 function consultarMensajeId(menConsultaId) {
     $.ajax({
-        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/message/message' + menConsultaId.val(),
+        url: 'https://g9d5bd8716ca2bc-bdciclo3.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/message/message/' + menConsultaId.val(),
         dataType: 'json',
         type: 'GET',
         success: function (json) {
